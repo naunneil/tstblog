@@ -1,0 +1,70 @@
+baseURL: /
+languageCode: ko-kr
+defaultContentLanguage: en
+title: 지식의 자취
+theme: cupper-hugo-theme
+googleAnalytics: UA-123456789-1
+disqusShortname: yourdiscussshortname
+# enableGitInfo: true
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  post: /:filename/
+
+imaging:
+  quality: 99
+
+params:
+  description: 세상에 대한 지식과 이해를 확대함으로써 삶을 긍정적인 방향으로 개선해낸다.
+  homeMetaContent: 세상에 대한 지식과 이해를 확대함으로써 삶을 긍정적인 방향으로 개선해낸다.
+  footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/).
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat: Jan 2, 2006
+  codePenUser: someUser
+  katex: true
+
+menu:
+  nav:
+    - name: Home
+      url: /
+      weight: 1
+    - name: 읽은 자취
+      url: /book/
+      weight: 2
+    - name: 개발 자취
+      url: /dev/
+      weight: 3
+
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2
